@@ -1,0 +1,67 @@
+<view class="question">
+  <!-- 问题头部 -->
+  <view class="head" wx:for="{{feed}}" wx:key="{{index}}">
+    <view class="tag">
+      <view class="tag-wrap" wx:for="{{item.tag}}" wx:key="{{idx}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="title">
+      <text>{{item.question}}</text>
+    </view>
+    <view class="describe">
+      <text>{{item.describe}}</text>
+    </view>
+    <view class="info">
+      <text class="number">620</text>
+      <text class="tag" decode>&nbsp;关注&nbsp;&nbsp;·&nbsp;&nbsp;</text>
+      <text class="number">{{item.comment_num}}</text>
+      <text class="tag" decode>&nbsp;评论&nbsp;&nbsp;·&nbsp;&nbsp;</text>
+      <text class="number">502</text>
+      <text class="tag" decode>&nbsp;浏览&nbsp;&nbsp;</text>
+    </view>
+  </view>
+  <!-- 中间栏 -->
+  <view class="middle">
+    <view class="invite">
+      <image src="../../images/invite.png"></image>
+      <text>邀请回答</text>
+    </view>
+    <view class="video">
+      <image src="../../images/eye.png"></image>
+      <text>视频回答</text>
+    </view>
+    <view class="write">
+      <image src="../../images/write.png"></image>
+      <text>写回答</text>
+    </view>
+    <view class="focus">
+      <image src="../../images/allread.png"></image>
+      <text>关注问题</text>
+    </view>
+  </view>
+  <!-- 回答头部 -->
+  <view class="answer-head">
+    <view class="answer-num">
+      <text decode>回答&nbsp;8</text>
+    </view>
+    <view class="sort">
+      <text decode>默认排序&nbsp;></text>
+    </view>
+  </view>
+  <!-- 回答列表 -->
+  <view class="answer-list" wx:for="{{answerList}}" wx:key="{{index}}">
+    <view class="head">
+      <image src="{{item.feed_source_img}}"></image>
+      <text>{{item.feed_source_name}}</text>
+    </view>
+    <view class="body" bindtap="toAnswer">
+      <text decode>{{item.answer_ctnt}}</text>
+    </view>
+    <view class="info">
+      <text decode>{{item.good_num}}赞同&nbsp;&nbsp;·&nbsp;&nbsp;</text>
+      <text decode>72喜欢&nbsp;&nbsp;·&nbsp;&nbsp;</text>
+      <text decode>{{item.comment_num}}评论&nbsp;&nbsp;</text>
+    </view>
+  </view>
+</view>

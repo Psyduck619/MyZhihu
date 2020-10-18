@@ -1,0 +1,165 @@
+.question{
+  background: #F0F4F3;
+  width: 750rpx;
+}
+.question .head{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 30rpx 22rpx 10rpx 22rpx;
+  background-color: #fff;
+  margin-bottom:5rpx;
+  line-height: 40rpx;
+}
+.question .head .tag{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25rpx;
+}
+.question .head .tag .tag-wrap{
+  height: 60rpx;
+  background-color: #f6f6f6;
+  color: #999;  
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  margin-right: 15rpx;
+  padding: 10rpx 20rpx;
+}
+.question .head .title{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 25rpx;
+  line-height: 60rpx;
+}
+.question .head .describe{
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-bottom: 25rpx;
+}
+.question .head .info text{
+  float: left;
+}
+.question .head .info .number{
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.question .head .info .tag{
+  color: #999;
+  font-size: 26rpx;
+}
+/* 中间栏 */
+.question .middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* padding: 30rpx 0rpx 20rpx 0rpx; */
+  background-color: #F0F4F3;
+  margin-bottom:20rpx;
+  line-height: 40rpx;
+}
+.question .middle view{
+  width: 237px;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  margin-right: 5rpx;
+}
+.question .middle .focus{
+  margin-right: 0;
+}
+.question .middle image{
+  width: 45rpx;
+  height: 45rpx;
+  display: inline-block;
+  margin-left: 72rpx;
+}
+.question .middle text{
+  display: flex;
+  justify-content: center;
+  color: #666;
+  font-size: 28rpx;
+}
+.question .middle .focus text{
+  color: #3181f2;
+}
+/* 回答头部 */
+.question .answer-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 28rpx 0 22rpx;
+  background-color: #fff;
+  margin-bottom:5rpx;
+  line-height: 40rpx;
+}
+.question .answer-head .answer-num{
+  font-size: 28rpx;
+  font-weight: bold;
+  border-bottom: black solid 4rpx;
+  padding: 20rpx 0rpx;
+}
+.question .answer-head .sort{
+  color: #999;
+  font-size: 28rpx;
+  padding: 20rpx 0rpx;
+}
+/* 回答列表 */
+.question .answer-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 30rpx 22rpx 10rpx 22rpx;
+  background-color: #fff;
+  margin-bottom:8rpx;
+  line-height: 40rpx;
+}
+.question .answer-list .head{
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+}
+.question .answer-list .head image{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  vertical-align: middle;
+  margin-right: 0 15rpx 20rpx 0;
+  position: relative;
+  left: -135rpx;
+}
+.question .answer-list .head text{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  color: #444;
+  font-size: 26rpx;
+  position: relative;
+  left: -400rpx;
+}
+.question .answer-list .body{
+  font-size: 30rpx;
+  line-height: 50rpx;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.question .answer-list .info{
+  color: #999;
+  font-size: 26rpx;
+  padding: 10rpx 0;
+}

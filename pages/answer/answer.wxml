@@ -1,0 +1,69 @@
+<view class="answer" wx:for="{{feed}}">
+  <!-- 问题头部 -->
+  <view class="head">
+    <text class="title" space="true" bindtap="toQuestion">{{item.question}}</text>
+    <text class="answer-num" space="true">ZUCC_JS • 72个回答 ></text>
+  </view>
+  <!-- 邀请和写 -->
+  <view class="for-answer">
+    <view class="invite">
+      <block>
+        <image src="../../images/invite.png"></image>
+        <text>邀请回答</text>
+      </block>
+    </view>
+    <view class="write">
+      <block>
+        <image src="../../images/write.png"></image>
+        <text>写回答</text>
+      </block>
+    </view>
+  </view>
+  <!-- 回答 -->
+  <view class="answer-content">
+    <!-- 用户信息 -->
+    <view class="head">
+      <view class="info">
+        <view class="img">
+          <image src="{{item.feed_source_img}}"></image>
+        </view>
+        <view>
+          <text class="name">{{item.feed_source_name}}</text>
+          <text class="tag">web废柴、幻想学家</text>
+        </view>
+      </view>
+      <view class="focus" bindtap="focus" data-text="{{focus_text}}">
+        <text class="{{isFocus? 'active' : ''}}">{{focus_text}}</text>
+      </view>
+    </view>
+     <!-- 回答内容 -->
+    <view class="body">
+      <text>{{item.answer_ctnt}}</text>
+      <image src="../../images/img01.jpg"></image>
+    </view>
+    <view class="time">
+      <text>{{"发布于" + item.time + "前 · 著作权归作者所有"}}</text>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="bottom">
+    <view class="left" bindtap="good">
+      <image src="../../images/good-bad.png"></image>
+      <text class="{{isGood? 'active' : ''}}" space="true">{{"赞同" + " "}}{{good_num}}</text>
+    </view>
+    <view class="right">
+      <view class="package">
+        <image src="../../images/heart2.png"></image>
+        <text space="true">喜欢 46</text>
+      </view>
+      <view class="package" bindtap="collect">
+        <image src="{{isCollect? '../../images/star.png' : '../../images/star2.png'}}"></image>
+        <text space="true">收藏</text>
+      </view>
+      <view class="package">
+        <image src="../../images/comment.png"></image>
+        <text space="true">{{"评论" + " " + item.comment_num}}</text>
+      </view>
+    </view>
+  </view>
+</view>

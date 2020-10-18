@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/answer/answer",
+    "pages/notify/notify",
+    "pages/question/question",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTitleText": "码乎",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#0068C4",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabBar/index.png",
+        "selectedIconPath": "images/tabBar/index_focus.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/notify/notify",
+        "iconPath": "images/tabBar/ring.png",
+        "selectedIconPath": "images/tabBar/ring_focus.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabBar/my.png",
+        "selectedIconPath": "images/tabBar/my_focus.png"
+      }
+    ]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

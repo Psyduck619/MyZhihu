@@ -1,0 +1,62 @@
+<view class="top-tab">
+  <view class="toptab {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" 
+    wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<view class="container">
+  <view class="cnt0" hidden="{{currentNavtab==0 ? '' : true}}" wx:for="{{feed}}"
+    wx:key="{{index}}">
+    <view class="head">
+      <view class="img">
+        <image src="{{item.feed_source_img}}"></image>
+      </view>
+      <view class="text">
+        <text class="name">{{item.feed_source_name}}</text>
+        <text class="time" decode>收藏了回答&nbsp;·&nbsp;10/15</text>
+      </view>
+    </view>
+    <view class="content">
+      <view class="text">
+        <view class="title">
+          <text>{{item.question}}</text>
+        </view>
+        <view class="info">
+          <text decode>{{item.feed_source_name + "的文章 · " + item.good_num 
+              + " 赞同 · " + item.comment_num + " 评论"}}</text>
+        </view>
+      </view>
+      <view class="img">
+        <image src="{{item.feed_source_img2}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="cnt1" hidden="{{currentNavtab==1 ? '' : true}}">
+    <view class="allread">
+      <view class="list">
+        <text>消息列表</text>
+      </view>
+      <view class="txt">
+        <text>全部已读</text>
+      </view>
+    </view>
+    <view class="notifylist" wx:for="{{notifyList}}" wx:key="{{index}}">
+      <view class="img">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="info">
+        <view class="name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="text">
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+      <view class="time">
+        <view>
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

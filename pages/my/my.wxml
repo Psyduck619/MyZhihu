@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button class="btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" 
+      bindgetuserinfo="getUserInfo"> 微信授权登录 </button>
+    <view wx:else class="content">
+      <view class="img">
+        <image bindtap="bindViewTap" class="userinfo-avatar" 
+          src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <view class="text">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class="setting" decode>个人主页&nbsp;></text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="mylist" wx:for="{{myList}}" wx:key="{{index}}">
+    <view class="idx">
+      <view class="img">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="text">
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</view>
